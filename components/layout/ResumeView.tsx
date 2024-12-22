@@ -8,7 +8,7 @@ import React from "react";
 import ResumePreview from "@/components/layout/my-resume/ResumePreview";
 import { usePathname } from "next/navigation";
 import PageWrapper from "@/components/common/PageWrapper";
-import { DownloadIcon, Share2Icon } from "lucide-react";
+import { DownloadIcon, Share2Icon, SearchIcon } from 'lucide-react';
 
 const FinalResumeView = ({
   params,
@@ -78,6 +78,12 @@ const FinalResumeView = ({
                   <Share2Icon className="size-6" /> Share URL
                 </Button>
               </RWebShare>
+              <Button
+                className="flex px-12 py-6 gap-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 focus:ring-4 focus:ring-purple-500/30 text-white"
+                onClick={() => window.open('https://resumematching.streamlit.app/', '_blank')}
+              >
+                <SearchIcon className="size-6" /> Find Matching Jobs
+              </Button>
             </div>
           </div>
         </div>
@@ -92,3 +98,4 @@ const FinalResumeView = ({
 };
 
 export default FinalResumeView;
+
